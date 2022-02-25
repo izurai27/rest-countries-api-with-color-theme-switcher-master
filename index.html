@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Countries Of The World</title>
+</head>
+<body>
+  <header>
+    <h1>Where in the world?</h1>
+    
+  </header>
+
+  <div class="first-screen">
+    <form class="input-filter">
+    <div class="search">
+      <span class="material-icons-outlined">  search </span>
+      <input class="inputSearch" id="searchInput" type="text" placeholder="Search for a country.." />
+      <!-- <button class="searchbtn">search</button> -->
+    </div>
+
+    <!-- <div class="filter"> -->
+      <select class="filter" id="filter" name="region" id="region">
+        <option value="">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    <!-- </div> -->
+    
+    </form>
+  
+    <div id="countries"></div>
+  </div>
+
+  <div class="second-screen">
+    <button class="back">back</button>
+    <div id="country-detail">
+      <!-- <div class="cardDetail">
+        <div class="img-containerDetail">
+          <img src='https://flagcdn.com/id.svg'/>
+        </div>
+        <div class="countryDetail">
+          <div data-name='IDN' class="nameDetail">Republic of Indonesia</div>
+
+          <div class="populationDetail"><strong>Population: </strong>273,523,621</div>
+          <div class="regionDetail"><strong>Region: </strong>Asia</div>
+          <div class="subRegionDetail"><strong>Sub Region: </strong>South-Eastern Asia</div>
+          <div class="capitalDetail"><strong>Capital: </strong>Jakarta</div>
+          <div class="tldDetail"><strong>Capital: </strong>.id</div>
+          <div class="currencyDetail"><strong>Capital: </strong>[object Object]</div>
+          <div class="langDetail"><strong>Capital: </strong>[object Object]</div>
+        </div>
+      </div> -->
+      
+    </div>
+    <div class="border-label">Border Countries:</div>
+    <div id="borderList">
+      <!-- <div class="border-item" data-name="FRA">France</div>
+      <div class="border-item" data-name="DEU">Germany</div>
+      <div class="border-item" data-name="LUX">Luxembourg</div>
+      <div class="border-item" data-name="NLD">Netherlands</div> -->
+    </div>
+    
+  </div>
+
+
+<script src="app.js"></script>  
+</body>
+</html>

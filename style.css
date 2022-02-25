@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3.46667vw;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: white;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #202D36;
+}
+
+header {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4.26667vw;
+  background-color: #2B3743;
+}
+
+header h1 {
+  font-size: 3.73333vw;
+  font-weight: 600;
+  color: white;
+}
+
+.input-filter {
+  padding: 4.26667vw;
+  padding-top: 6.4vw;
+  height: 49.06667vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4.26667vw;
+}
+
+.input-filter .search {
+  height: 12.8vw;
+  background-color: #2B3743;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 8.26667vw;
+  border-radius: 5px;
+}
+
+.input-filter .search input {
+  font-size: 3.46667vw;
+  border: none;
+  background-color: transparent;
+  margin-left: 26px;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.input-filter .search input::-webkit-input-placeholder {
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.input-filter .search input:-ms-input-placeholder {
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.input-filter .search input::-ms-input-placeholder {
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.input-filter .search input::placeholder {
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.input-filter select {
+  height: 12.8vw;
+  width: 100%;
+  border: none;
+  padding-left: 6.66667vw;
+  background-color: transparent;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3.2vw;
+  padding-right: 5.33333vw;
+  width: 53.33333vw;
+  background-color: #2B3743;
+  border-radius: 5px;
+}
+
+.input-filter select option {
+  margin-top: 10px;
+  background-color: #2B3743;
+  border: none;
+  white-space: nowrap;
+  width: 53.33333vw;
+}
+
+.input-filter select option:hover {
+  color: pink;
+}
+
+#countries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#countries .card {
+  width: 71.2vw;
+  margin-bottom: 10.66667vw;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #2B3743;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#countries .card .img-container img {
+  width: 71.2vw;
+  height: 42.93333vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#countries .card .countryInfo {
+  background-color: #2B3743;
+  border-radius: 0px 0px 5px 5px;
+  padding-left: 6.4vw;
+  padding-right: 6.4vw;
+  padding-top: 7.2vw;
+  padding-bottom: 9.6vw;
+}
+
+#countries .card .countryInfo .name {
+  font-size: 4.8vw;
+  font-weight: 800;
+  margin-bottom: 6.4vw;
+}
+
+#countries .card .countryInfo .population, #countries .card .countryInfo .region, #countries .card .countryInfo .capital {
+  font-size: 3.73333vw;
+  font-weight: 600;
+  margin-bottom: 3.2vw;
+}
+
+.second-screen {
+  display: block;
+  width: 85.6vw;
+  margin: auto;
+  margin-bottom: 16.26667vw;
+}
+
+.second-screen .back {
+  margin-top: 10.66667vw;
+  height: 8.8vw;
+  width: 28vw;
+  margin-bottom: 17.33333vw;
+}
+
+.second-screen #country-detail {
+  color: white;
+  font-size: 3.73333vw;
+}
+
+.second-screen #country-detail img {
+  width: 85.6vw;
+  height: 61.33333vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 13.33333vw;
+}
+
+.second-screen #country-detail .nameDetail {
+  font-size: 5.86667vw;
+  margin-bottom: 8.8vw;
+  font-weight: 800;
+}
+
+.second-screen #country-detail .details {
+  line-height: 9.86667vw;
+}
+
+.second-screen #country-detail .capitalDetail {
+  margin-bottom: 6.66667vw;
+  line-height: 9.86667vw;
+}
+
+.second-screen .border-label {
+  line-height: 9.86667vw;
+  color: white;
+  font-size: 3.73333vw;
+  font-weight: bold;
+}
+
+.second-screen #borderList {
+  color: white;
+  width: 85.06667vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.second-screen #borderList .border-item {
+  min-height: 7.46667vw;
+  background-color: #2B3743;
+  border-radius: 2px;
+  font-size: 3.2vw;
+  padding: 2.4vw 8vw;
+  width: 45%;
+  margin-top: 5.86667vw;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2.66667vw;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.second-screen {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

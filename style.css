@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -31,12 +32,12 @@
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #202D36;
 }
 
 header {
-  height: 80px;
+  max-height: 21.33333vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,6 +91,7 @@ header h1 {
   margin-left: 26px;
   color: white;
   font-family: 'Nunito Sans', sans-serif;
+  outline: none;
 }
 
 .input-filter .search input::-webkit-input-placeholder {
@@ -161,11 +163,15 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-color: #2B3743;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#countries .card .img-container {
+  border-radius: 5px 5px 0px 0px;
 }
 
 #countries .card .img-container img {
@@ -183,18 +189,20 @@ header h1 {
   padding-right: 6.4vw;
   padding-top: 7.2vw;
   padding-bottom: 9.6vw;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.5%;
 }
 
 #countries .card .countryInfo .name {
   font-size: 4.8vw;
-  font-weight: 800;
   margin-bottom: 6.4vw;
+  font-weight: 400;
 }
 
 #countries .card .countryInfo .population, #countries .card .countryInfo .region, #countries .card .countryInfo .capital {
   font-size: 3.73333vw;
-  font-weight: 600;
-  margin-bottom: 3.2vw;
+  font-weight: normal;
+  margin-bottom: 2.13333vw;
 }
 
 .second-screen {
@@ -285,6 +293,177 @@ header h1 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+@media only screen and (min-width: 767px) {
+  .material-icons-outlined {
+    font-size: 1.31944vw;
+    /* Preferred icon size */
+  }
+  header {
+    padding: 2.36111vw;
+    max-height: 5.55556vw;
+    padding-left: 5.55556vw;
+  }
+  header h1 {
+    font-size: 1.73611vw;
+  }
+  .input-filter {
+    padding-top: 3.26389vw;
+    height: 9.93056vw;
+    padding-bottom: 3.33333vw;
+    padding-left: 5.55556vw;
+    padding-right: 5.55556vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0;
+  }
+  .input-filter .search {
+    height: 3.88889vw;
+    width: 33.33333vw;
+    padding-left: 2.15278vw;
+  }
+  .input-filter .search input {
+    font-size: 0.97222vw;
+  }
+  .input-filter select {
+    height: 3.88889vw;
+    padding-left: 1.73611vw;
+    font-size: 0.83333vw;
+    padding-right: 4.16667vw;
+    width: 13.88889vw;
+  }
+  #countries {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 5.55556vw;
+    padding-bottom: 0.69444vw;
+  }
+  #countries .card {
+    width: 18.33333vw;
+    height: 23.33333vw;
+    margin-top: 0.625vw;
+    margin-bottom: 4.58333vw;
+  }
+  #countries .card .img-container {
+    width: 18.33333vw;
+    height: 11.11111vw;
+  }
+  #countries .card .img-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #countries .card .countryInfo {
+    padding-left: 1.66667vw;
+    padding-right: 1.66667vw;
+    padding-top: 1.80556vw;
+    padding-bottom: 2.5vw;
+  }
+  #countries .card .countryInfo .name {
+    font-size: 1.25vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5%;
+    margin-bottom: 1.25vw;
+  }
+  #countries .card .countryInfo .population, #countries .card .countryInfo .region, #countries .card .countryInfo .capital {
+    font-size: 0.97222vw;
+    margin-bottom: 0.55556vw;
+  }
+  .second-screen {
+    width: 88.95833vw;
+    margin-bottom: 0;
+  }
+  .second-screen .back {
+    margin-top: 5.55556vw;
+    height: 2.77778vw;
+    width: 9.44444vw;
+    margin-bottom: 5.55556vw;
+  }
+  .second-screen #country-detail {
+    font-size: 1.11111vw;
+  }
+  .second-screen #country-detail .cardDetail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .second-screen #country-detail .countryDetail {
+    width: 40.27778vw;
+    height: 27.77778vw;
+  }
+  .second-screen #country-detail .landscape {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40.27778vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .second-screen #country-detail img.imgDetail {
+    width: 41.66667vw;
+    height: 30.55556vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .second-screen #country-detail .nameDetail {
+    font-size: 2.36111vw;
+    margin-bottom: 2.91667vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .second-screen #country-detail .details {
+    line-height: 2.56944vw;
+  }
+  .second-screen #country-detail .capitalDetail {
+    line-height: 2.56944vw;
+    margin-bottom: 1.04167vw;
+  }
+  .second-screen .borderGroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .second-screen .border-label {
+    line-height: 2em;
+    font-size: 1.11111vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .second-screen #borderList {
+    width: 30.20833vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .second-screen #borderList .border-item {
+    min-height: 1.875vw;
+    font-size: 1.04167vw;
+    padding: 0.625vw 1.875vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 14px;
+    margin-right: 0.69444vw;
+  }
 }
 
 .second-screen {

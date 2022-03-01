@@ -1,6 +1,6 @@
 const searchInput = document.getElementById("searchInput");
 const filter = document.getElementById("filter");
-const url = 'https://restcountries.com/v3.1/';
+const url = 'https://restcountries.com/v2/';
 const country = {};
 const countries = document.querySelector('#countries');
 
@@ -25,25 +25,25 @@ async function getDefault (array) {
   countries.innerHTML = '';
   const len = array.length
   for (let i=0; i<len; i++){
-    console.log(countries.innerHTML);
-    console.log(array[i])
+    // console.log(countries.innerHTML);
+    // console.log(array[i])
     await fetch (url+'name/'+array[i])
       .then(response => response.json())
       .then(res => {
         
         // document.querySelector('.border-label').style.display='block';
-        countries.innerHTML = countries.innerHTML +  `<div data-name='${res[0].cca3}' class="card click">
-                                                        <div data-name='${res[0].cca3}' class="img-container click">
-                                                          <img  class="click" data-name='${res[0].cca3}' src='${res[0].flags.svg}'/>
+        countries.innerHTML = countries.innerHTML +  `<div data-name='${res[0].alpha3Code}' class="card click">
+                                                        <div data-name='${res[0].alpha3Code}' class="img-container click">
+                                                          <img  class="click" data-name='${res[0].alpha3Code}' src='${res[0].flags.svg}'/>
                                                         </div>
-                                                        <div data-name='${res[0].cca3}' class="countryInfo click">
-                                                          <div data-name='${res[0].cca3}' class="name click">${res[0].name.common}</div>
-                                                          <div data-name='${res[0].cca3}' class="population click"><strong>Population: </strong>${res[0].population.toLocaleString('en-US')}</div>
-                                                          <div data-name='${res[0].cca3}' class="region click"><strong>Region: </strong>${res[0].region}</div>
-                                                          <div data-name='${res[0].cca3}' class="capital click"><strong>Capital: </strong>${res[0].capital}</div>
+                                                        <div data-name='${res[0].alpha3Code}' class="countryInfo click">
+                                                          <div data-name='${res[0].alpha3Code}' class="name click">${res[0].name}</div>
+                                                          <div data-name='${res[0].alpha3Code}' class="population click"><strong>Population: </strong>${res[0].population.toLocaleString('en-US')}</div>
+                                                          <div data-name='${res[0].alpha3Code}' class="region click"><strong>Region: </strong>${res[0].region}</div>
+                                                          <div data-name='${res[0].alpha3Code}' class="capital click"><strong>Capital: </strong>${res[0].capital}</div>
                                                         </div>
                                                       </div>`
-        console.log(countries.innerHTML)
+        // console.log(countries.innerHTML)
       })
 
   }
@@ -59,15 +59,15 @@ async function getDefault (array) {
 //       .then(res => {
 //         console.log(res)
 //         // document.querySelector('.border-label').style.display='block';
-//         countries.innerHTML = countries.innerHTML +  `<div data-name='${res[0].cca3}' class="card click">
-//                                                         <div data-name='${res[0].cca3}' class="img-container click">
-//                                                           <img  class="click" data-name='${res[0].cca3}' src='${res[0].flags.svg}'/>
+//         countries.innerHTML = countries.innerHTML +  `<div data-name='${res[0].alpha3Code}' class="card click">
+//                                                         <div data-name='${res[0].alpha3Code}' class="img-container click">
+//                                                           <img  class="click" data-name='${res[0].alpha3Code}' src='${res[0].flags.svg}'/>
 //                                                         </div>
-//                                                         <div data-name='${res[0].cca3}' class="countryInfo click">
-//                                                           <div data-name='${res[0].cca3}' class="name click">${res[0].name.common}</div>
-//                                                           <div data-name='${res[0].cca3}' class="population click"><strong>Population: </strong>${res[0].population.toLocaleString('en-US')}</div>
-//                                                           <div data-name='${res[0].cca3}' class="region click"><strong>Region: </strong>${res[0].region}</div>
-//                                                           <div data-name='${res[0].cca3}' class="capital click"><strong>Capital: </strong>${res[0].capital}</div>
+//                                                         <div data-name='${res[0].alpha3Code}' class="countryInfo click">
+//                                                           <div data-name='${res[0].alpha3Code}' class="name click">${res[0].name.common}</div>
+//                                                           <div data-name='${res[0].alpha3Code}' class="population click"><strong>Population: </strong>${res[0].population.toLocaleString('en-US')}</div>
+//                                                           <div data-name='${res[0].alpha3Code}' class="region click"><strong>Region: </strong>${res[0].region}</div>
+//                                                           <div data-name='${res[0].alpha3Code}' class="capital click"><strong>Capital: </strong>${res[0].capital}</div>
 //                                                         </div>
 //                                                       </div>`
         
@@ -84,7 +84,7 @@ document.addEventListener('click', function(e){
   if (e.target.classList.contains('click')){
     firstScreen.style.display = 'none'
     secondScreen.style.display = 'block';
-    console.log(e.target.dataset.name)
+    console.log(e.target.dataset.name);
     displayDetailCountry(e.target.dataset.name);
   }
 
@@ -147,15 +147,15 @@ searchInput.addEventListener('keyup',inputResult)
     function displayCountries(arr) {
       countries.innerHTML = '';
       let content ='';
-      arr.map( elemen => content +=  `<div data-name='${elemen.cca3}' class="card click">
-                                        <div data-name='${elemen.cca3}' class="img-container click">
-                                          <img  class="click" data-name='${elemen.cca3}' src='${elemen.flags.svg}'/>
+      arr.map( elemen => content +=  `<div data-name='${elemen.alpha3Code}' class="card click">
+                                        <div data-name='${elemen.alpha3Code}' class="img-container click">
+                                          <img  class="click" data-name='${elemen.alpha3Code}' src='${elemen.flags.svg}'/>
                                         </div>
-                                        <div data-name='${elemen.cca3}' class="countryInfo click">
-                                          <div data-name='${elemen.cca3}' class="name click">${elemen.name.common}</div>
-                                          <div data-name='${elemen.cca3}' class="population click"><strong>Population: </strong>${elemen.population.toLocaleString('en-US')}</div>
-                                          <div data-name='${elemen.cca3}' class="region click"><strong>Region: </strong>${elemen.region}</div>
-                                          <div data-name='${elemen.cca3}' class="capital click"><strong>Capital: </strong>${elemen.capital}</div>
+                                        <div data-name='${elemen.alpha3Code}' class="countryInfo click">
+                                          <div data-name='${elemen.alpha3Code}' class="name click">${elemen.name.common}</div>
+                                          <div data-name='${elemen.alpha3Code}' class="population click"><strong>Population: </strong>${elemen.population.toLocaleString('en-US')}</div>
+                                          <div data-name='${elemen.alpha3Code}' class="region click"><strong>Region: </strong>${elemen.region}</div>
+                                          <div data-name='${elemen.alpha3Code}' class="capital click"><strong>Capital: </strong>${elemen.capital}</div>
                                         </div>
                                       </div>`
       );
@@ -164,39 +164,38 @@ searchInput.addEventListener('keyup',inputResult)
    
 //function to display country detail
     function displayDetail(arr){
-      // console.log('arr:'+arr)
-      let content ='';
-      const currency = Object.keys(arr[0].currencies)[0];
+      console.log('arr:'+arr)
+      // let content ='';
+      // const currency = arr[0].currencies[0].name;
       
       //to get languages
-      const len = Object.keys(arr[0].languages).length;
-      const lang = [];
-      for (let i=0; i<len; i++){
-        const prop = Object.keys(arr[0].languages)[i];
-            lang.push(arr[0].languages[prop])
-          }
+      // const len = Object.keys(arr[0].languages).length;
+      // const lang = [];
+      // for (let i=0; i<len; i++){
+      //   const prop = Object.keys(arr[0].languages)[i];
+      //       lang.push(arr[0].languages[prop])
+      //     }
           
       //to get borders
-      const border = arr[0].borders;
-      console.log(border)
+      const border = arr.borders;
+      console.log(border);
+
       if(border===undefined){
         document.querySelector('.border-label').style.display='none';
         borderList.innerHTML = '';
-        return;
-      }
-      console.log(arr[0]);
-      createBorder(border);
-
-      document.querySelector('.imgDetail').src=arr[0].flags.svg;
-      document.querySelector('.nameDetail').innerHTML = arr[0].name.common;
-      document.querySelector('#official').innerHTML = `Official Name: ${arr[0].name.official}`;
-      document.querySelector('#population').innerHTML = `Population: ${arr[0].population.toLocaleString('en-US')}`;
-      document.querySelector('#region').innerHTML = `Region: ${arr[0].region}`;
-      document.querySelector('#subRegion').innerHTML = `Sub Region: ${arr[0].subregion}`;
-      document.querySelector('#capital').innerHTML = `Capital: ${arr[0].capital}`;
-      document.querySelector('#tld').innerHTML = `Top Level Domain: ${arr[0].tld[0]}`;
-      document.querySelector('#currency').innerHTML = `Currencies: ${arr[0].currencies[currency].name}`;
-      document.querySelector('#language').innerHTML = `Languages: ${lang.join(', ')}`
+        // return;
+      } else {createBorder(border);}
+      
+      document.querySelector('.imgDetail').src=arr.flags.svg;
+      document.querySelector('.nameDetail').innerHTML = arr.name;
+      document.querySelector('#official').innerHTML = `Native Name: ${arr.nativeName}`;
+      document.querySelector('#population').innerHTML = `Population: ${arr.population.toLocaleString('en-US')}`;
+      document.querySelector('#region').innerHTML = `Region: ${arr.region}`;
+      document.querySelector('#subRegion').innerHTML = `Sub Region: ${arr.subregion}`;
+      document.querySelector('#capital').innerHTML = `Capital: ${arr.capital}`;
+      document.querySelector('#tld').innerHTML = `Top Level Domain: ${arr.topLevelDomain[0]}`;
+      document.querySelector('#currency').innerHTML = `Currencies: ${arr.currencies[0].name}`;
+      document.querySelector('#language').innerHTML = `Languages: ${arr.languages[0].name}`
 
 
       // arr.map ( elemen => content +=  `<div class="cardDetail">
@@ -204,7 +203,7 @@ searchInput.addEventListener('keyup',inputResult)
       //                                     <img src='${elemen.flags.svg}'/>
       //                                   </div>
       //                                   <div class="countryDetail">
-      //                                     <div data-name='${elemen.cca3}' class="nameDetail">${elemen.name.common}</div>
+      //                                     <div data-name='${elemen.alpha3Code}' class="nameDetail">${elemen.name.common}</div>
       //                                     <div class="landscape">
       //                                       <div>
       //                                         <div class="details"><strong>Official Name: </strong>${elemen.name.official}</div>
@@ -238,7 +237,8 @@ searchInput.addEventListener('keyup',inputResult)
         fetch (url+'alpha/'+element)
           .then(response => response.json())
           .then(res => {
-            borderList.innerHTML  += `<div class="border-item" data-name=${res[0].cca3}>${res[0].name.common}</div>`
+            document.querySelector('.border-label').style.display='block';
+            borderList.innerHTML  += `<div class="border-item" data-name=${res.alpha3Code}>${res.name}</div>`
            
           }) 
                  

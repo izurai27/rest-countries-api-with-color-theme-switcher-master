@@ -43,6 +43,10 @@ body{
   background-color: #202D36;
 }
 
+.click{
+  cursor:pointer;
+}
+
 header{
   max-height:makeVW(80,375 );
   display:flex;

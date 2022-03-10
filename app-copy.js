@@ -152,7 +152,7 @@ searchInput.addEventListener('keyup',inputResult)
                                           <img  class="click" data-name='${elemen.alpha3Code}' src='${elemen.flags.svg}'/>
                                         </div>
                                         <div data-name='${elemen.alpha3Code}' class="countryInfo click">
-                                          <div data-name='${elemen.alpha3Code}' class="name click">${elemen.name.common}</div>
+                                          <div data-name='${elemen.alpha3Code}' class="name click">${elemen.name}</div>
                                           <div data-name='${elemen.alpha3Code}' class="population click"><strong>Population: </strong>${elemen.population.toLocaleString('en-US')}</div>
                                           <div data-name='${elemen.alpha3Code}' class="region click"><strong>Region: </strong>${elemen.region}</div>
                                           <div data-name='${elemen.alpha3Code}' class="capital click"><strong>Capital: </strong>${elemen.capital}</div>
@@ -185,7 +185,7 @@ searchInput.addEventListener('keyup',inputResult)
         borderList.innerHTML = '';
         // return;
       } else {createBorder(border);}
-      
+      console.log(arr);
       document.querySelector('.imgDetail').src=arr.flags.svg;
       document.querySelector('.nameDetail').innerHTML = arr.name;
       document.querySelector('#official').innerHTML = `Native Name: ${arr.nativeName}`;
@@ -238,7 +238,7 @@ searchInput.addEventListener('keyup',inputResult)
           .then(response => response.json())
           .then(res => {
             document.querySelector('.border-label').style.display='block';
-            borderList.innerHTML  += `<div class="border-item" data-name=${res.alpha3Code}>${res.name}</div>`
+            borderList.innerHTML  += `<div class="border-item click" data-name=${res.alpha3Code}>${res.name}</div>`
            
           }) 
                  

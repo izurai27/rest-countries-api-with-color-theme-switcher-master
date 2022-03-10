@@ -36,6 +36,10 @@ body {
   background-color: #202D36;
 }
 
+.click {
+  cursor: pointer;
+}
+
 header {
   max-height: 21.33333vw;
   display: -webkit-box;
@@ -217,6 +221,7 @@ header h1 {
   height: 8.8vw;
   width: 28vw;
   margin-bottom: 17.33333vw;
+  cursor: pointer;
 }
 
 .second-screen #country-detail {
